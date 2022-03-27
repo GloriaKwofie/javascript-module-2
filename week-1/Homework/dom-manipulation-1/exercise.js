@@ -26,6 +26,7 @@ const element = document.querySelector('#jumbotron-text')
 console.log(element);
 
 const elementsInside = document.querySelectorAll('p.primary-container')
+console.log(elementsInside);
 
 
 
@@ -52,7 +53,7 @@ const changeButtonColor = document.querySelector('#bgrChangeBtn')
 changeButtonColor.addEventListener('click', ()=>{
 const body = document.querySelector('body')
 console.log(body);
-body.style.backgroundColor = "red"
+body.style.backgroundColor = "orange"
 
 })
 
@@ -60,8 +61,20 @@ body.style.backgroundColor = "red"
 Task 4
 ======
 
+
 When a user clicks the ‘Add some text’ button, a new paragraph should be added inside the section that says “LEARN MORE”
 */
+    
+
+    const addSomeText = document.querySelector('#addTextBtn')
+    addSomeText.addEventListener('click', ()=>{
+    const newParagraph = document.createElement('p')
+    const newContent = document.createTextNode('LEARN MORE')
+    newParagraph.appendChild(newContent)
+    console.log(newParagraph);
+})
+
+
 
 
 
@@ -71,6 +84,11 @@ Task 5
 
 When the 'Larger links!' button is clicked, the text of all links on the page should increase.
 */
+const textShdIncrease = document.querySelector('#largerLinksBtn')
+textShdIncrease.addEventListener('click', ()=>{
+    const text = document.querySelectorAll('a')
+    
+})
 
 
 /*
@@ -81,6 +99,11 @@ Using the same function in Task 4,
 When the 'Add' button is clicked, get the text inside the input field and create a new paragraph in the "LEARN MORE" section
 Also clear the text inside the input field
 */
+
+const addBtn = document.querySelector('#addArticleBtn')
+addBtn.addEventListener('click', ()=>{
+    const 
+})
 
 /*
 Task 7
