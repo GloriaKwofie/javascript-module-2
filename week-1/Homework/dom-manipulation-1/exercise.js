@@ -87,6 +87,8 @@ When the 'Larger links!' button is clicked, the text of all links on the page sh
 const textShdIncrease = document.querySelector('#largerLinksBtn')
 textShdIncrease.addEventListener('click', ()=>{
     const text = document.querySelectorAll('a')
+    text.forEach(a => a.style.fontSize = '28px')
+
     
 })
 
@@ -99,11 +101,13 @@ Using the same function in Task 4,
 When the 'Add' button is clicked, get the text inside the input field and create a new paragraph in the "LEARN MORE" section
 Also clear the text inside the input field
 */
-
-const addBtn = document.querySelector('#addArticleBtn')
-addBtn.addEventListener('click', ()=>{
-    const 
+const addNewParagraph = document.querySelector('#addArticleBtn')
+const inputField = document.querySelector('.form-control'
+addNewParagraph.addEventListener('click', () => {
+    newText(inputField.value)
+    inputField.value = ''
 })
+
 
 /*
 Task 7
@@ -113,4 +117,4 @@ Create an array of 5 different colors.
 Using the same function in Task 3, every time the 'Change colour' button is clicked, the background color will be changed with the next color in the array.
 The next color when you are in the last color of the array will be the first color again.
 */
-
+const colors = ['pink', 'orange', 'blue', 'purple', 'black']
