@@ -102,7 +102,7 @@ When the 'Add' button is clicked, get the text inside the input field and create
 Also clear the text inside the input field
 */
 const addNewParagraph = document.querySelector('#addArticleBtn')
-const inputField = document.querySelector('.form-control'
+const inputField = document.querySelector('.form-control')
 addNewParagraph.addEventListener('click', () => {
     newText(inputField.value)
     inputField.value = ''

@@ -15,7 +15,19 @@
  */
 function exerciseOne(arrayOfPeople) {
   let content = document.querySelector("#content");
+  arrayOfPeople.forEach(person => {
+    const nameOfPerson = document.createElement('H1')
+    const jobOfPerson = document.createElement('H2')
+    nameOfPerson.textContent = person.name
+    jobOfPerson.textContent = person.job
+    content.appendChild(nameOfPerson)
+    content.appendChild(jobOfPerson)
+    
+  });
+
 }
+
+
 
 /**
  *
@@ -24,7 +36,18 @@ function exerciseOne(arrayOfPeople) {
  * All of your HTML should go inside the Div tag with the id "content".
  *
  */
-function exerciseTwo(shopping) {
+function exerciseTwo(shoppingArray) {
+  console.log(shoppingArray);
+  let content = document.querySelector('#content')
+  const shopingList = document.createElement('ul')
+  
+  content.appendChild(shopingList)
+
+  shoppingArray.forEach((shoppingItem) => {
+    const listItem = document.createElement('li')
+    listItem.textContent = shoppingItem
+    shopingList.appendChild(listItem)
+  })
   //Write your code in here
 }
 
@@ -58,6 +81,32 @@ function exerciseTwo(shopping) {
     The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 **/
 function exerciseThree(books) {
+  let content = document.querySelector('#content')
+  const list =document.createElement('ul')
+  content.appendChild(list)
+  
+  books.forEach((book) => {
+    const listItem = document.createElement('li')
+    const paragraph = document.createElement('p')
+    const image = document.createElement('img')
+
+    image.src = book.url
+    paragraph.textContent = `Author: ${book.author } - title: ${book.title}`
+
+    if (book.alreadyRead) {
+      listItem.classList.add('alreadyRead')
+    } else {
+      listItem.classList.add('IHaveNotReadThisBook')
+      
+    }
+    
+    listItem.appendChild(paragraph)
+    listItem.appendChild(image)
+    list.appendChild(listItem)
+
+  } )
+  
+
   //Write your code in here
 }
 
@@ -87,17 +136,21 @@ const books = [
   {
     title: "The Design of Everyday Things",
     author: "Don Norman",
-    alreadyRead: false
+    alreadyRead: false,
+    url: 'https://lawsonblake.com/content/images/2020/12/Design-of-Everyday-Things-1920x1280-min.png'
+
   },
   {
     title: "The Most Human Human",
     author: "Brian Christian",
-    alreadyRead: true
+    alreadyRead: true,
+    url: 'https://images-na.ssl-images-amazon.com/images/I/71HMyqG6MRL.jpg'
   },
   {
     title: "The Pragmatic Programmer",
     author: "Andrew Hunt",
-    alreadyRead: true
+    alreadyRead: true,
+    url: 'https://images-na.ssl-images-amazon.com/images/I/41HXiIojloL._SX396_BO1,204,203,200_.jpg'
   }
 ];
 
