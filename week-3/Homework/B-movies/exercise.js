@@ -59,9 +59,43 @@ var movies = [
 ];
 
 // create showMovies function
+const allMovies = document.querySelector('#all-movies')
+const numberOfMovies = document.querySelector('#movies-number')
+
+const showMovies = (arrayOfMovies) => {
+  numberOfMovies.textContent = movies.length;
+  arrayOfMovies.forEach((movie) => {
+    const paragraphForMovies = document.createElement('p')
+    paragraphForMovies.textContent = `${movie.title} ${movie.director}`
+    allMovies.appendChild(paragraphForMovies)
+    
+  })
+}
+
+const myMovie = {
+  title: "The Flash",
+  director: "Andres Muschietti ",
+  type: "Adventure",
+  haveWatched: true, 
+
+}
+
+const addmovie = (movie) => {
+  
+  setTimeout((myMovie) =>{
+    movies.push(movie)
+    console.log(movies);
+  }, 2000)
+}
+
+
+showMovies(movies)
 
 
 // create a new movie object for your favorite movie
 
 
 // create addMovies function
+
+
+

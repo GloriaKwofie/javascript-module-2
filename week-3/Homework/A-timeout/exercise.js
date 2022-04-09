@@ -15,3 +15,11 @@ function changeBackground() {
     background.style.backgroundColor = 'orange' 
 }
 setTimeout(changeBackground, 5000)
+
+let newColor = 0;
+const colors = ['green', 'black', 'yellow', 'pink', 'violet', 'blue']
+function changeBackground () {
+    const background = document.querySelector('body')
+    background.style.backgroundColor = colors[newColor]
+    
+}
