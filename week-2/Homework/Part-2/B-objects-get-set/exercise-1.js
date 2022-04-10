@@ -10,3 +10,5 @@ var kitten = {
 
 // YOUR CODE HERE
 
+console.log(kitten);
+
