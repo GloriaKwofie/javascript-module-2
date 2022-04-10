@@ -17,3 +17,32 @@ var car = {
 
 */
 
+let school = {
+    name: 'Eada',
+    location: 'Barcelona',
+    course: 'inovation'
+}
+
+let country = {
+    name: 'Ghana',
+    independence: 1957,
+    president: 'Akuffo-Addo'
+}
+
+let bag = {
+    color: 'black',
+    zip: 3,
+    type: 'bag-pack'
+}
+
+let pet = {
+    animal: 'dog',
+    age: 5,
+    sex: female,
+    children: 0
+}
+
+let movie = {
+    name: 'the Flash',
+    genre: 'adventure'
+}
