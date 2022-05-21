@@ -71,6 +71,11 @@ const showMovies = (arrayOfMovies) => {
     
   })
 }
+setTimeout(()=> showMovies(movies),1000)
+
+
+
+// create a new movie object for your favorite movie
 
 const myMovie = {
   title: "The Flash",
@@ -79,23 +84,19 @@ const myMovie = {
   haveWatched: true, 
 
 }
+// create addMovies function
+
+
 
 const addmovie = (movie) => {
-  
   setTimeout((myMovie) =>{
     movies.push(movie)
     console.log(movies);
+    showMovies(movies)
   }, 2000)
 }
 
-
-showMovies(movies)
-
-
-// create a new movie object for your favorite movie
-
-
-// create addMovies function
+addmovie(myMovie)
 
 
 
