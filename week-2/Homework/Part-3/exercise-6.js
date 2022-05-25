@@ -142,12 +142,18 @@ function mentorWithMoreSkills(mentors) {
 }
 
 //7
-let addStudentLikes = [1, 2, 3];
-addStudentLikes.push(4);
-console.log(addStudentLikes);
+mentors.forEach(mentor => {
+  mentor.addStudentLikes = function () {
+    this.studentLikes++
+  }
+})
 
 //8
 
 function addStudentLikes(mentors){
+   mentors.forEach(mentor => {
+     mentor.studentLikes++
+   })
+
   
 }

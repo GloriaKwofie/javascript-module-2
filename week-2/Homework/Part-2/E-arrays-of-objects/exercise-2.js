@@ -38,29 +38,34 @@ let travelDestinations = [destination1, destination2, destination3, destination4
 DO NOT EDIT ANYTHING ABOVE THIS LINE
 WRITE YOUR CODE BELOW
 */
-let getDestinationName =  (travelDestinations) => travelDestinations.destinationName
     
 
 
-let destinationNamesWithin500Kms =  (travelDestinations) => travelDestinations.distanceKms <= 500
+let destinationNamesWithin500Kms =  travelDestinations
+.filter((destination) => destination.distanceKms <= 500)
+.map((destination) => destination.destinationName)
 
-    
-
-travelDestinations.filter(destinationNamesWithin500Kms).map(getDestinationName)
 
 // Complete here
 
-let destinationNameReachableByFerry =  (travelDestinations) =>
-    travelDestinations.transportations.includes( 'ferry')
-    
+let destinationNameReachableByFerry =  travelDestinations
+.filter((destination) => destination.transportations.includes( 'ferry')) 
+.map((destination) => destination.destinationName)
 
-travelDestinations.filter(destinationNameReachableByFerry).map(getDestinationName)
+    
 // Complete here
 
-let destinationNamesMoreThan300KmsAwayByTrain = (travelDestinations) => travelDestinations.destinationName > 300 && travelDestinations.transportations.includes('train')
-    
-travelDestinations.filter(destinationNamesWithin500Kms).map(getDestinationName)
+let destinationNamesMoreThan300KmsAwayByTrain = travelDestinations
+.filter((destination) => {
+    return (
+        destination.distanceKms > 300 && destination.transportations.includes('train')
 
+    )
+})
+    
+.map((destination) => {
+    return destination.destinationName
+})
 // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
 
 

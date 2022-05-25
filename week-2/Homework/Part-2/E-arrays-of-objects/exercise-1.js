@@ -42,7 +42,6 @@ let personsYoungerThan28YearsOld = function(persons) {
     
 }
 persons.filter(personsYoungerThan28YearsOld)
-// Complete here
 
 
 /*
