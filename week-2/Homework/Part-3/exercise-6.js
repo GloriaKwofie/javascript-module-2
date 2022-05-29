@@ -103,42 +103,56 @@ var mentors = [
 
 // Question 1
 
-mentors.forEach(function (mentor) {
+const addNewClassAndSkill = mentors.forEach(function (mentor) {
   if(mentor === 'Barcelona' && mentor.skills.includes('React')){
     console.log(`Hi, my name is ${mentor.firstName} ${mentor.lastName}. I work in Barcelona and i know React.`);
   }
   if (mentor === 'Barcelona') {
+    mentor.class = 'Jun1'
     mentor.skills.push('SQL')
   } 
-  const addSkill = newSkills 
-  mentor.addSkill = function (newSkill) {
-    this.skills.push(newSkill)
-    
-  }
+  
+  mentors.forEach((mentor) => {
+    mentor.addSkill = function (newSkill) {
+      mentor.skills.push(newSkill)
+    }
+
+  })
   
   
 })
 
 //4
 function addSkill(mentors,newSkill){
-  mentors.forEach(mentors.addSkill(newSkill))
+  mentors.forEach((mentor) => {
+    mentor.skills.push(newSkill)
+  })
 }
 
 
 //5
-function removeSkill(mentors,skillToBeRemoved){
-  mentors.forEach(mentor =>{
-    mentor.removeSkill(skillToBeRemoved)
+function removeSkill(mentors, newSkill){
+  mentors.forEach((mentor) =>{
+    if (mentor.skills.includes(newSkill)) {
+      let elementIndex = mentor.skills.indexOf(newSkill)
+      mentor.skills.slice(elementIndex, 1)
+    }
   })
   
 }
 
 //6
 function mentorWithMoreSkills(mentors) {
-  const numberOfSkillsOfMentor = mentors.map(mentor => mentor.skills.length)
-  const highestSkill = Math.max(...numberOfSkillsOfMentor)
-  const nameOfMentorWithMoreSkills = mentors.find(mentor => mentor.skill.length === highestSkill)
-  return nameOfMentorWithMoreSkills
+  let result = 0
+  let indexOfMentors = 0
+  mentors.forEach((mentor, index) => {
+    if (result < mentor.skills.length) {
+      result = mentor.skills.length
+      indexOfMentors = index
+    }
+
+  })
+  return mentors [indexOfMentors]
 }
 
 //7
@@ -157,3 +171,5 @@ function addStudentLikes(mentors){
 
   
 }
+mentorWithMoreSkills(mentors)
+console.log(mentorWithMoreSkills(mentors));
