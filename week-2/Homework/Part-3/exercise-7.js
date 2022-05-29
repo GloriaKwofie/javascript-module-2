@@ -77,7 +77,7 @@ function addToShoppingCart(id){
 function removeFromShoppingCart(id){
   const positionProduct = shoppingCart.selectedProducts.findIndex(product => products.id === id)
   console.log(positionProduct);
-  shoppingCart.totalPrice = shoppingCart.totalPrice - shoppingCart.selectedProducts[positionProduct].price
+  shoppingCart.totalPrice = shoppingCart.totalPrice - shoppingCart.selectedProducts[positionProduct]
   shoppingCart.selectedProducts = shoppingCart.selectedProducts.filter(product => product.id != id)
 
 }

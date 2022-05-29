@@ -126,7 +126,7 @@ function addSkill(mentors,newSkill){
 
 
 //5
-function removeSkill(mentors,newSkill){
+function removeSkill(mentors,skillToBeRemoved){
   mentors.forEach(mentor =>{
     mentor.removeSkill(skillToBeRemoved)
   })
@@ -136,9 +136,9 @@ function removeSkill(mentors,newSkill){
 //6
 function mentorWithMoreSkills(mentors) {
   const numberOfSkillsOfMentor = mentors.map(mentor => mentor.skills.length)
-  const highestSkill = Math.max(numberOfSkillsOfMentor)
+  const highestSkill = Math.max(...numberOfSkillsOfMentor)
   const nameOfMentorWithMoreSkills = mentors.find(mentor => mentor.skill.length === highestSkill)
-  return nameOfMentorWithMoreSkills.firstName.lastName
+  return nameOfMentorWithMoreSkills
 }
 
 //7

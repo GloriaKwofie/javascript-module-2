@@ -1,11 +1,11 @@
 // Write your code here
 
 
-const img1 ='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStbZU9Pjrw3UGOpWx0_P8bWeoK1xxpscAjqg&usqp=CAU'
-const img2 ='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm66beH407ScpWEiYV5tu5mvPuwAw00kQhUA&usqp=CAU'
-const img3 ='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpf-v1qZZTs6DR39oxnbnyHYdsZ6mauaFCCA&usqp=CAU'
-const img4 ='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXb99B8Q5g2KUyP80tdBiMuizZEBep4doaKw&usqp=CAU'
-const img5 ='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_ffdW1LIkXo650whJgWBqPkszQbtfM9EnueCl6Dj7xegRI2rqWiQwcyRl4XYE6iSE_iM&usqp=CAU'
+const img1 ='https://images.unsplash.com/photo-1524117074681-31bd4de22ad3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGhhcHB5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60'
+const img2 ='https://images.unsplash.com/photo-1489710437720-ebb67ec84dd2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8aGFwcHl8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60'
+const img3 ='https://images.unsplash.com/photo-1511988617509-a57c8a288659?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGhhcHB5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60'
+const img4 ='https://images.unsplash.com/photo-1622495893726-f1478dcebc03?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTE1fHxoYXBweXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
+const img5 ='https://images.unsplash.com/photo-1517840933437-c41356892b35?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjE0fHxoYXBweXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
 
 
 const gamesImages = [img1, img2, img3, img4, img5]

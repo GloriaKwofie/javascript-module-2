@@ -30,18 +30,11 @@ WRITE YOUR CODE BELOW
 
 let persons = [person1, person2, person3]// Complete here
 
-let personNames = function (persons) {
-    return persons.name;
-    
-}
-persons.map(personNames)
+let personNames =  persons.map(person => person.name)
 // Complete here
 
-let personsYoungerThan28YearsOld = function(persons) {
-    return persons.age < 28
-    
-}
-persons.filter(personsYoungerThan28YearsOld)
+let personsYoungerThan28YearsOld = persons.filter(person => person.age < 28)
+// Complete here
 
 
 /*
